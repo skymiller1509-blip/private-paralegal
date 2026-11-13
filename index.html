@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Private Paralegal — read a contract before you sign it</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 680px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+  textarea { width: 100%; height: 180px; font-size: 1rem; padding: .5rem; }
+  button { font-size: 1.1rem; padding: .6rem 1.2rem; margin-top: .5rem; cursor: pointer; }
+  #result { margin-top: 1.5rem; border: 2px solid #222; padding: 1rem; display: none; }
+  #summary { font-size: 1.2rem; }
+  h3 { margin-bottom: .2rem; }
+  ul, ol { padding-left: 1.2rem; }
+  small { color: #555; }
+  .warn { color: #a00; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Private Paralegal</h1>
+<p>Paste a contract. SERV Reasoning reviews it step by step, and shows its working. Built for freelancers who sign contracts alone.</p>
+<textarea id="contract" placeholder="Paste the contract text here..."></textarea><br>
+<button id="review">Review this contract</button>
+<p id="status"></p>
+<div id="result">
+  <p id="summary"></p>
+  <h3>Type</h3>
+  <p id="type"></p>
+  <h3>Key dates</h3>
+  <p id="dates"></p>
+  <h3>Payment</h3>
+  <p id="payment"></p>
+  <h3>What each side must do</h3>
+  <p id="obligations"></p>
+  <h3>Risks to check</h3>
+  <ul id="risks"></ul>
+  <h3>Missing</h3>
+  <ul id="missing"></ul>
+  <h3>How it was checked</h3>
+  <ol id="steps"></ol>
+  <p id="warning" class="warn"></p>
+  <small id="model"></small>
+</div>
+<p><small>General information only, not legal advice. Honest limit (v1): the reviewer reads the contract you paste. It does not fetch outside data. If a fact is not in the contract, it says not stated. Your pasted contract is sent to the SERV Reasoning API for review only. It is not stored by this app. The API key stays on the server and never reaches your browser.</small></p>
+<script src="app.js"></script>
+</body>
+</html>
